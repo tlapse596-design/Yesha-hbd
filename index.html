@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff2d75;
+            --soft-pink: #ffb7c5;
+            --dark-bg: #000000;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Video-Style Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1a0008 0%, #000000 100%);
+        }
+
+        /* The Glowing Flower from the Video */
+        .flower-center {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 0.8; }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            color: var(--soft-pink);
+            text-shadow: 0 0 20px var(--neon-pink);
+            margin-bottom: 50px;
+        }
+
+        /* Literature Body */
+        .literature-body {
+            background: rgba(20, 20, 20, 0.7);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(255, 45, 117, 0.2);
+            margin-bottom: 120px;
+            font-size: 2.2rem;
+            line-height: 1.6;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 45, 117, 0.3);
+        }
+
+        /* Window Gallery */
+        .window-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 50px;
+            margin-bottom: 150px;
+        }
+
+        .window-card {
+            background: #111;
+            padding: 15px 15px 70px 15px;
+            border: 1px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transition: all 0.5s ease;
+        }
+
+        .window-card img {
+            width: 100%;
+            height: 550px; 
+            object-fit: cover;
+            display: block;
+            filter: contrast(1.1);
+        }
+
+        .window-label {
+            font-size: 2.8rem;
+            color: var(--soft-pink);
+            margin-top: 15px;
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        /* Particle Stars */
+        .star {
+            position: fixed;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: twinkle linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-100vh); }
+        }
+
+        .footnote-section {
+            background: linear-gradient(to bottom, transparent, #1a0008);
+            padding: 100px 20px;
+            margin-top: 50px;
+        }
+
+        .footnote-poem {
+            font-size: 2rem;
+            color: var(--soft-pink);
+            font-style: italic;
+            white-space: pre-line;
+            text-shadow: 0 0 15px var(--neon-pink);
+            margin-bottom: 40px;
+        }
+
+        /* --- FILM STRIP ADDITION --- */
+        .film-strip-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 30px 0;
+            background: transparent;
+            /* Creates the film sprocket holes top and bottom */
+            background-image: 
+                radial-gradient(circle, #333 25%, transparent 26%),
+                radial-gradient(circle, #333 25%, transparent 26%);
+            background-size: 40px 40px;
+            background-position: 0 0, 0 100%;
+            background-repeat: repeat-x;
+            border-top: 2px solid rgba(255, 45, 117, 0.2);
+            border-bottom: 2px solid rgba(255, 45, 117, 0.2);
+        }
+
+        .film-strip-container::-webkit-scrollbar {
+            display: none; /* Keep it clean on mobile */
+        }
+
+        .film-item {
+            display: inline-block;
+            margin: 0 5px;
+            border: 10px solid rgba(20, 20, 20, 0.8); /* The film frame */
+            background: #000;
+        }
+
+        .film-item img {
+            height: 180px;
+            width: auto;
+            display: block;
+            filter: sepia(0.3) contrast(1.2); /* Gives a slight film vibe */
+        }
+        /* --------------------------- */
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-animation">
+        <div class="flower-center"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Happy Birthday To My Beloved Yesha</h1>
+        </header>
+
+        <div class="literature-body">
+            To my dearest Yesha,
+            
+            happy birtday my siopao as you know i just did this randomly and i did not plan to make this but this is all i can do i hope it makes your day anyway back to the main topic mahal ko ur turning 23 na wow i know we haven't meet for that long but i hope you have a bright future ahead i know your gonna have problems, challenges on your way but dont give up my love its gonna be over once you've become successfull yehey teacher na sya wait im too advance whahah pero i just want to let you know na don't look back even its getting darker kasi hahabulin ka ng aso na nag lalaway whahahah jk lang  i mean dont look back even there's a time na mag strestress ka magiging tired no social battery, kasi i know naman how stressing your gonna be in the future eh so please take care of yourself my love and always be healthy may you be away from sickness and bad spirits why konga tuh pala ginawa whahah ay kasi wlaa ako mabigay sayu na gift eh huhu yun ngalang anyway love ko may God or Allah guide your beautiful future just as you know im just here supporting you even times you wont talk to me or times we may have arguements or times were gonna be busy with our careers i just wanna say i love you so much, thank you that i meet you thank for always be around thank you for always listening thank you for always for everything anyway wish you a happy 23th birthday my love🥰🌹🌷💕💋💐 
+        </div>
+
+        <div class="window-gallery">
+            <div class="window-card">
+                <img src="/Messenger_creation_8D15783D-AA2C-4D46-B94D-B4E4E4D28E5F.jpeg " alt="My Wife">
+                <div class="window-label">My Wife</div>
+            </div>
+            <div class="window-card">
+                <img src="/Messenger_creation_5CA25875-F7E7-4F74-B330-AF3309566D45.jpeg" alt="My Baby">
+                <div class="window-label">My Baby</div>
+            </div>
+            <div class="window-card">
+                <img src="/Messenger_creation_AB63D37A-DCAC-43E4-8E6E-3000CAE10E20.jpeg " alt="My Love">
+                <div class="window-label">My Love</div>
+            </div>
+            <div class="window-card">
+                <img src="/IMG_7106-1.png " alt="My LOML">
+                <div class="window-label">My LOML</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footnote-section">
+        <div class="footnote-poem">
+            FUN FACTS ABOUT YESHA A.K.A MY WIFE
+            Yesha loves to sleep
+            she always snuggle with her pillows tho i wish i was her pillows.
+            Yesha loves cute things when she sees one she gonna be crazy to get that.
+            Yesha loves to kupal people i mean shes a trickster so its her fun.
+            Yesha loves to drink coffee especially the black coffee no sugar added she like strong one she always says that it makes her heart more pumpimg
+            Yesha loves animals but can't take care one i mean its understandable that the animal will suffer because of her too much of touching aggressively, tho she can take care i suggested that we adopt a cat but she says not a female one whats wrong with the female? I mean im gonna take care one so im tryna be bias so.
+            Yesha loves pink of course she likes that and purple too my 2nd fav color so if she spotted a pink becareful she gonna spends a hella of money.
+            Yesha loves beautiful and pretty things i mean its natural behaviour so ehem.
+            Yesha dont likes horror huhu how could i play horror if shes gonna be sick after seeing one.
+            
+            
+            Photos Below Are All About My Beloved Yesha:
+            anyway its been 20 days since editing this whahah i hope it's all worth it.
+        </div>
+
+        <div class="film-strip-container">
+            <div class="film-item"><img src="/IMG_20260318_052257.png "></div>
+            <div class="film-item"><img src="/Messenger_creation_F2CD62DD-E78B-4B3C-A884-E23413470768.jpeg "></div>
+            <div class="film-item"><img src="/Messenger_creation_248319DA-566D-4CB8-8A24-28550C7D6600.jpeg "></div>
+            <div class="film-item"><img src="/Messenger_creation_1313827D-F2E7-4927-AB60-55668B7CA992.jpeg"></div>
+            <div class="film-item"><img src="/Messenger_creation_FEA76D20-D090-47DD-BE78-C6B2ED4AF855.jpeg "></div>
+            <div class="film-item"><img src="/Messenger_creation_3463E867-E253-4A92-891D-139BCE2E98EF.jpeg "></div>
+            <div class="film-item"><img src="/Messenger_creation_6A1D4C31-FF5C-4CBF-AB0C-8CF508BE7AFA.jpeg "></div>
+            <div class="film-item"><img src="/Screenshot_20260112_184431_com_ss_android_ugc_trill_DetailActivity_edit_475849388674208.jpg "></div>
+        </div>
+    </div>
+
+    <script>
+        // Create twinkling "Sakura Dust" like the video
+        function createStars() {
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 'px';
+                star.style.width = size;
+                star.style.height = size;
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDuration = Math.random() * 3 + 2 + 's';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                
+                if(Math.random() > 0.7) {
+                    star.style.background = '#ff2d75';
+                    star.style.boxShadow = '0 0 10px #ff2d75';
+                }
+
+                document.body.appendChild(star);
+            }
+        }
+
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.innerHTML = Math.random() > 0.5 ? '🌸' : '🌹';
+            petal.style.position = 'fixed';
+            petal.style.top = '-50px';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.fontSize = Math.random() * 20 + 10 + 'px';
+            petal.style.zIndex = '100';
+            petal.style.pointerEvents = 'none';
+            petal.style.color = '#ffb7c5';
+            petal.style.opacity = Math.random();
+            
+            const duration = Math.random() * 3 + 5;
+            petal.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(110vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], {
+                duration: duration * 1000,
+                easing: 'linear'
+            });
+
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), duration * 1000);
+        }
+
+        window.onload = () => {
+            createStars();
+            setInterval(createPetal, 300);
+        };
+    </script>
+</body>
+</html>
